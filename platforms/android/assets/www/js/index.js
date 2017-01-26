@@ -16,21 +16,24 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var noLoad = document.getElementById("addtodo");
+var addForm = document.getElementById("addform");
+var checkBox = document.getElementById("check");
 
-addtodo.addEventListener('click', function(evt) {
-  evt.preventDefault();
-  var what = document.getElementById("what");
-  console.log(what.value);
+addForm.addEventListener('click', function(evt) {
+  if (!checkBox.checked) {
+    evt.preventDefault();
+    var what = document.getElementById("what");
+    console.log(what.value);
 
-  var where = document.getElementById("where");
-  console.log(where.value);
+    var where = document.getElementById("where");
+    console.log(where.value);
 
-  var when = document.getElementById("when");
-  console.log(when.value);
+    var when = document.getElementById("when");
+    console.log(when.value);
 
-  var cameraTakePicture = document.getElementById("cameraTakePicture");
-  console.log(cameraTakePicture.value);
+    var cameraTakePicture = document.getElementById("cameraTakePicture");
+    console.log(cameraTakePicture.value);
+   } 
 }, false);
 
 var app = {
@@ -70,6 +73,8 @@ function cameraTakePicture() {
 
    function onSuccess(imageData) {
       var image = document.getElementById('myImage');
+      image.height = 100;
+      image.width = 100;
       image.src = "data:image/jpeg;base64," + imageData;
    }
 

@@ -1,13 +1,15 @@
+
 <body onload="Init ()">
 
 <h1>add page</h1>
 
-<form method="POST" id="addtodo" action="index.html">
+<form method="POST" id="addform" action="index.html">
 	Remember to:<br><input type="text" placeholder="ex. buy milk" name="what" id="what" required ><br>
 	Where:<br><input type="text" placeholder="ex. Supermarket" name="where" id="where"><br>
 	When:<br><input type="datetime" name="when" id="when"><br>
 	Photo:<br><button id="cameraTakePicture">Capture photo</button>
     	<img id="myImage"></img><br>
+    Ready? <input type="checkbox" id="check">	
   	<input type="submit" value="Add">
 </form>
 
