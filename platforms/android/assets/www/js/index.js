@@ -16,6 +16,23 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var noLoad = document.getElementById("addtodo");
+
+addtodo.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  var what = document.getElementById("what");
+  console.log(what.value);
+
+  var where = document.getElementById("where");
+  console.log(where.value);
+
+  var when = document.getElementById("when");
+  console.log(when.value);
+
+  var cameraTakePicture = document.getElementById("cameraTakePicture");
+  console.log(cameraTakePicture.value);
+}, false);
+
 var app = {
     // Application Constructor
     initialize: function() {

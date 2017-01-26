@@ -16,6 +16,26 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var addForm = document.getElementById("addform");
+var checkBox = document.getElementById("check");
+
+addForm.addEventListener('click', function(evt) {
+  if (!checkBox.checked) {
+    evt.preventDefault();
+    var what = document.getElementById("what");
+    console.log(what.value);
+
+    var where = document.getElementById("where");
+    console.log(where.value);
+
+    var when = document.getElementById("when");
+    console.log(when.value);
+
+    var cameraTakePicture = document.getElementById("cameraTakePicture");
+    console.log(cameraTakePicture.value);
+   } 
+}, false);
+
 var app = {
     // Application Constructor
     initialize: function() {
