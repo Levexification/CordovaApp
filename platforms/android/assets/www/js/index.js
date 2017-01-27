@@ -63,7 +63,7 @@ var app = {
     }
 };
 
-
+//Captures picture using phone camera
 document.getElementById("cameraTakePicture").addEventListener("click", cameraTakePicture);
 function cameraTakePicture() {
    navigator.camera.getPicture(onSuccess, onFail, { 
@@ -81,6 +81,32 @@ function cameraTakePicture() {
    function onFail(message) {
       alert('Failed because: ' + message);
    }
+}
+
+
+document.getElementById("storeData").addEventListener("click", storeData);
+
+var i = 0;
+
+function storeData(){
+
+    var what = document.getElementById("what");
+    var where = document.getElementById("where");
+    var when = document.getElementById("when");
+    
+    var myData = { "what": what.value, "where": where.value, "when": when.value};
+    var myJSON = JSON.stringify(myObj);
+
+    localStorage.setItem("data", myData);
+}
+
+document.getElementById("print").addEventListener("click", printData);
+function printData(){
+
+  JSON.parse(localStorage.data);
+
+  var t = document.createTextNode(where.value);
+
 }
 
 

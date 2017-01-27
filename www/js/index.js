@@ -16,6 +16,34 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+//Store data
+document.getElementById("storeData").addEventListener("click", storeData);
+
+var i = 0;
+
+function storeData(){
+
+    var what = document.getElementById("what");
+    var where = document.getElementById("where");
+    var when = document.getElementById("when");
+
+    var myData = { "what": what.value, "where": where.value, "when": when.value};
+    var myJSON = JSON.stringify(myData);
+
+    localStorage.setItem("data", myJSON);
+}
+
+//Reads data
+document.getElementById("print").addEventListener("click", printData);
+function printData(){
+
+
+
+}
+
+
+//Add form
 var addForm = document.getElementById("addform");
 var checkBox = document.getElementById("check");
 
@@ -63,7 +91,7 @@ var app = {
     }
 };
 
-
+//Captures picture using phone camera
 document.getElementById("cameraTakePicture").addEventListener("click", cameraTakePicture);
 function cameraTakePicture() {
    navigator.camera.getPicture(onSuccess, onFail, { 
@@ -82,6 +110,5 @@ function cameraTakePicture() {
       alert('Failed because: ' + message);
    }
 }
-
 
 app.initialize();
