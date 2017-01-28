@@ -17,10 +17,12 @@
  * under the License.
  */
 
+
+
 //Store data
-document.getElementById("storeData").addEventListener("click", storeData);
 
 var i = 0;
+document.getElementById("storeData").addEventListener("click", storeData);
 
 function storeData(){
 
@@ -31,16 +33,11 @@ function storeData(){
     var myData = { "what": what.value, "where": where.value, "when": when.value};
     var myJSON = JSON.stringify(myData);
 
-    localStorage.setItem("data", myJSON);
+    localStorage.setItem("data" + localStorage.length, myJSON);
 }
 
 //Reads data
-document.getElementById("print").addEventListener("click", printData);
-function printData(){
 
-
-
-}
 
 
 //Add form
