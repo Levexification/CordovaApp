@@ -19,6 +19,7 @@
 -->
 <html>
     <head>
+     <meta charset="UTF-8">
         <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
             https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
@@ -35,11 +36,13 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <title>Hello World</title>
     </head>
-    <body>
+    <body onload="">
         <div class="app">
             <form action="add.html">
                 <input type="submit" value="Add">
             </form>
+
+                <button id="print">Refresh</button>
         </div>
 
         <script type="text/javascript" src="cordova.js"></script>
