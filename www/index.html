@@ -19,6 +19,7 @@
 -->
 <html>
     <head>
+     <meta charset="UTF-8">
         <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
             https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
@@ -35,21 +36,17 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <title>Hello World</title>
     </head>
-    <body>
+    <body onload="">
         <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+            <form action="add.html">
+                <input type="submit" value="Add">
+            </form>
 
-                <form action="add.html">
-                    <input type="submit" value="Add">
-                </form>
-
-                
+                <button id="print">Refresh</button>
+                <p id="demo"></p>
 
         </div>
+
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>

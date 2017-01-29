@@ -16,25 +16,16 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var addForm = document.getElementById("addform");
-var checkBox = document.getElementById("check");
 
-addForm.addEventListener('click', function(evt) {
-  if (!checkBox.checked) {
-    evt.preventDefault();
-    var what = document.getElementById("what");
-    console.log(what.value);
+//Reads data
+document.getElementById("print").addEventListener("click", printData);
 
-    var where = document.getElementById("where");
-    console.log(where.value);
+function printData(){
 
-    var when = document.getElementById("when");
-    console.log(when.value);
-
-    var cameraTakePicture = document.getElementById("cameraTakePicture");
-    console.log(cameraTakePicture.value);
-   } 
-}, false);
+    for(i=0; i<localStorage.length; i++){
+      //var dataObj = JSON.parse(localStorage.)
+    }
+}
 
 var app = {
     // Application Constructor
@@ -62,24 +53,5 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-
-
-document.getElementById("cameraTakePicture").addEventListener("click", cameraTakePicture);
-function cameraTakePicture() {
-   navigator.camera.getPicture(onSuccess, onFail, { 
-      quality: 50,
-      destinationType: Camera.DestinationType.DATA_URL
-   });
-
-   function onSuccess(imageData) {
-      var image = document.getElementById('myImage');
-      image.src = "data:image/jpeg;base64," + imageData;
-   }
-
-   function onFail(message) {
-      alert('Failed because: ' + message);
-   }
-}
-
 
 app.initialize();
