@@ -1,0 +1,6 @@
+
+var myObj = { "what":$_POST['what'], "where":$_POST['where'], "when":$_POST['when'], "image":$_POST['image'] };
+
+var myJSON = JSON.stringify(myObj);
+
+window.location = "index.html?x=" + myJSON;
