@@ -1,24 +1,16 @@
 //Store data
-var storeData = document.getElementById("storedata");
-
-storedata.addEventListener('click', function(evt) {  
+document.getElementById("storeData").addEventListener("click", storeData);
+function storeData(){
 
     var what = document.getElementById("what");
     var where = document.getElementById("where");
     var when = document.getElementById("when");
 
-    var myData = { "what": what.value, "where": where.value, "when": when.value};
+    var myData = {"todo":[{ "what": what.value, "where": where.value, "when": when.value}]};
     var myJSON = JSON.stringify(myData);
 
     localStorage.setItem("data" + localStorage.length, myJSON);
-
-    for(i=0; i<localStorage.length; i++){
-      var myJSON = JSON.parse(myData[i]);
-      document.getElementById("demo").innerHTML = myObj.what;
-    }
 }
-
-
 
 //Add form
 var addForm = document.getElementById("addform");
@@ -36,7 +28,7 @@ addForm.addEventListener('click', function(evt) {
     var when = document.getElementById("when");
     console.log(when.value);
 
-    var cameraTakePicture = document.getElementById("cameraTakePicture"); 
+    var cameraTakePicture = document.getElementById("cameraTakePicture");
     console.log(cameraTakePicture.value);
    } 
 }, false);

@@ -1,16 +1,20 @@
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
 <body onload="Init ()">
 
 <h1>add page</h1>
+<div class="app">
 
-<form method="POST" id="addform" action="index.html" >
-	Remember to:	<br><input type="text" placeholder="ex. buy milk" name="what" id="what" required ><br>
-	Where:			<br><input type="text" placeholder="ex. Supermarket" name="where" id="where"><br>
-	When:			<br><input type="datetime" name="when" id="when"><br>
-	Photo:			<br><button id="cameraTakePicture">Capture photo</button>
-    					<img id="myImage" name="image" width="200px"></img><br>
-    Ready? 			<input type="checkbox" id="check">	
-  					<input type="submit" value="Add" id="storedata">
-</form>
-
+	<form method="POST" id="addform" action="index.html" >
+		Remember to:	<br><input type="text" placeholder="ex. buy milk" name="todo[what]" id="what" required ><br>
+		Where:			<br><input type="text" placeholder="ex. Supermarket" name="todo[where]" id="where"><br>
+		When:			<br><input type="datetime" name="todo[when]" id="when"><br>
+		Photo:			<br><button id="cameraTakePicture">Capture photo</button>
+	    					<img id="myImage" name="todo[image]" width="200px"></img><br>
+	    Ready? 			<input type="checkbox" id="check">	
+	  					<input type="submit" value="Add" id="storeData">
+	</form>
+</div>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/addForm.js"></script>

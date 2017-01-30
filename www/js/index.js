@@ -23,8 +23,8 @@ document.getElementById("print").addEventListener("click", printData);
 function printData(){
 
     for(i=0; i<localStorage.length; i++){
-      var myJSON = JSON.parse(myData);
-      document.getElementById("demo").innerHTML = myObj.what;
+      dataObj = JSON.parse(localStorage.)
+      document.getElementById("list").innerHTML = dataObj.todo[i].what + " " +  dataObj.todo[i].where + " " +  dataObj.todo[i].when;
     }
 }
 
